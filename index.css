@@ -177,7 +177,7 @@ body {
   
   .title a:hover {
     color: #0027d5;
-    font-size: 36px;
+    font-size: 30px;
   }
   
   .article .discription {
@@ -248,6 +248,9 @@ body {
   .blogarticle {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .blogarticle li{
     margin-top: 40px;
     margin-bottom: 40px;
   }
