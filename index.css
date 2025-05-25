@@ -250,10 +250,6 @@ body {
     flex-wrap: wrap;
   }
 
-  .blogarticle li{
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
   
   .blogarticle img {
     margin-bottom: 16px;
@@ -265,6 +261,7 @@ body {
   .content li {
     width: 416px;
     margin: 12px;
+    margin: 40px 12px;
   }
   
   .blogarticle .discription {
