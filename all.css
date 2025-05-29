@@ -381,7 +381,6 @@ input {
   font-size: 16px;
   color: #4b4b4b;
   outline: none;
-  background-color: #fbfbfb;
 }
 
 .search:focus-within {
