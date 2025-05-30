@@ -127,13 +127,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/*----部落格頁面------*/
 
+/*----通用------*/
 body {
   font-family: "Noto Sans TC";
   background-color: #fbfbfb;
   line-height: 1.5;
   margin: 0 auto;
+  box-sizing: border-box
 }
 
 img {
@@ -153,12 +154,10 @@ a:hover {
   color: #0027d5;
 }
 /*----目錄------*/
-
 .menu ul {
   display: flex;
   justify-content: center;
 }
-
 .menu a {
   display: block;
   margin: 24px 20px;
@@ -166,17 +165,19 @@ a:hover {
   font-size: 28px;
   font-weight: 700;
 }
-
+.menu a:hover {
+  color: #0027d5;
+}
 .active a {
   color: #0027d5;
 }
 
+/*----部落格頁面------*/
 /*----Header------*/
 
 .header {
   display: flex;
   justify-content: center;
-  
 }
 
 .headercontent {
@@ -213,14 +214,13 @@ a:hover {
   .header img {
     max-width: 100%;
   }
+  /*----圖片放大效果有問題------*/
   .headercontent {
     width: 100%;
+    justify-content: center;
   }
   .headercontent2 {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 24px;
-    padding-right: 37px;
+    padding: 24px;
   }
   .header h1 {
     font-size: 52px;
@@ -231,16 +231,19 @@ a:hover {
 .banner {
   display: flex;
   gap: 24px;
-  border-top: 1px solid #6c757d;
-  border-bottom: 1px solid #6c757d;
+  border: 1px solid #6c757d;
 }
-
+/*----img 圖片放大效果有問題------*/
 .banner img {
   max-width: 50%;
 }
-
+.container{
+  width: 100%;
+  margin: auto 0;
+}
 .article {
-  max-width: 30%;
+  max-width: 66%;
+  margin: 48px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,15 +286,21 @@ time {
   font-weight: 700;
 }
 
-.title a {
+.banner .title a {
   font-size: 28px;
   color: black;
   font-weight: 700;
 }
 
-.title a:hover {
+.banner .title a:hover {
   color: #0027d5;
   font-size: 30px;
+}
+
+.banner .title{
+  font-size: 28px;
+  color: black;
+  font-weight: 700;
 }
 
 .article .discription {
@@ -329,19 +338,21 @@ time {
   .banner {
     display: block;
   }
-  .banner img {
-    max-width: 100%;
-  }
-  .article {
-    margin-top: 48px;
-    margin-bottom: 48px;
-    margin-left: 12px;
-    margin-right: 12px;
+/*----img 圖片放大效果有問題------*/
+.banner img {
+  max-width: 100%;
+}
+
+.article {
     max-width: 80%;
+    margin: 48px 12px;
   }
 }
 
 @media (max-width: 767px) {
+  .container{
+    width: 100%;
+  }
   .article {
     max-width: 100%;
   }
@@ -352,9 +363,6 @@ time {
 .content {
   max-width: 1320px;
   margin: 0 auto;
-  padding-top: 80px;
-  padding-left: 12px;
-  padding-right: 12px;
   /*----小於1320後沒有置中？------*/
 }
 
@@ -377,7 +385,8 @@ time {
 input {
   border: none;
   font-weight: 500;
-  max-width: 318px;
+  width: 80%;
+
   font-size: 16px;
   color: #4b4b4b;
   outline: none;
@@ -446,12 +455,9 @@ input {
 }
 
 /*----Page------*/
-.page {
-  margin-bottom: 80px;
-}
 
 .page ul {
-  width: 328px;
+  max-width: 328px;
   border-radius: 40px;
   background-color: #fff;
   margin: 0 auto;
@@ -474,17 +480,122 @@ a {
   font-weight: 500;
   color: #4b4b4b;
 }
+/*----部落格頁面結束-----*/
 
-@media (max-width: 992px) {
-  .page {
-    margin-bottom: 64px;
-  }
+/*----內文頁面-----*/
+.contentoutline{
+  border: 1px solid #6c757d;
+  padding: 80px 12px;
 }
+
+
+.articlecontent-detail{
+  margin: 0 auto;
+  max-width: 636px;
+}
+
+.articlecontent{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+.articlecontent img{
+  width: 100%;
+  height: 320px;
+}
+.articlecontent h2{
+  font-weight: 700;
+  font-size: 28px;
+  color: #0027d5;
+}
+
+.articlecontent h3{
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 12px;
+}
+
+.articlecontent p.suggestion{
+  padding-top: 8px;
+  
+}
+.articlecontent ol{
+  list-style: decimal;
+  padding-left: 36px;
+}
+
+.articlecontent ul{
+  list-style: initial;
+  padding-left: 36px;
+} 
+
+.articlecontent .textcolor-blue{
+  font-weight: 500;
+  color: #0027d5;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.articlecontent .summary {
+  background-color: #EDEDED;
+  padding: 24px;
+  border-radius: 24px;
+  font-weight: 700;
+}
+
+.articlecontent .hyperlink{
+  color: #0027d5;
+  text-decoration: underline;
+}
+
+@media(max-width: 767px){
+  .contentoutline{
+  padding: 64px 12px;
+}
+}
+
+
+/*----page------*/
+
+.articlepage{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 636px;
+}
+
+.articlepage a{
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  text-wrap: nowrap;
+  overflow: hidden;
+  font-weight: 500;
+  border-radius: 40px;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  font-size: 16px;
+  height: 24px; /*不知道為什麼要加高度才能符合設計稿*/
+}
+.articlepage i{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.articlepage a:hover {
+  background-color: #0027d5;
+  color: #fbfbfb;
+  border: none;
+}
+
+
+
 
 /*----Footer------*/
 .footer {
-  border-top: 1px solid #6c757d;
-  
 }
 .footer ul {
   display: flex;
