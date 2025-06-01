@@ -134,12 +134,16 @@ body {
   background-color: #fbfbfb;
   line-height: 1.5;
   margin: 0 auto;
-  box-sizing: border-box
+}
+
+* {
+  box-sizing: border-box;
 }
 
 img {
   width: 100%;
   height: auto;
+  vertical-align: middle;
   display: block;
   object-fit: cover;
 }
@@ -153,6 +157,25 @@ img {
 a:hover {
   color: #0027d5;
 }
+
+.title {
+  font-size: 28px;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.title a {
+  font-size: 28px;
+  color: black;
+  font-weight: 700;
+}
+
+.title a:hover {
+  color: #0027d5;
+  font-size: 30px;
+}
+
 /*----目錄------*/
 .menu ul {
   display: flex;
@@ -160,7 +183,7 @@ a:hover {
 }
 .menu a {
   display: block;
-  margin: 24px 20px;
+  padding: 24px 20px;
   color: black;
   font-size: 28px;
   font-weight: 700;
@@ -172,16 +195,17 @@ a:hover {
   color: #0027d5;
 }
 
-/*----部落格頁面------*/
 /*----Header------*/
 
 .header {
   display: flex;
   justify-content: center;
+  height: calc(100vh - 90px);
 }
 
 .headercontent {
   display: flex;
+  flex-wrap: wrap;
   background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
   background-size: cover;
   width: 50%;
@@ -194,7 +218,6 @@ a:hover {
 
 .headercontent2 {
   color: #0027d5;
-
   padding-left: 80px;
 }
 .header h1 {
@@ -210,11 +233,12 @@ a:hover {
 @media (max-width: 992px) {
   .header {
     display: block;
+    height: auto;
   }
   .header img {
     max-width: 100%;
+    height: calc(100vh - 90px - 180px);
   }
-  /*----圖片放大效果有問題------*/
   .headercontent {
     width: 100%;
     justify-content: center;
@@ -286,28 +310,17 @@ time {
   font-weight: 700;
 }
 
-.banner .title a {
-  font-size: 28px;
-  color: black;
-  font-weight: 700;
+.service p {
+  color: #4B4B4B;
 }
 
-.banner .title a:hover {
-  color: #0027d5;
-  font-size: 30px;
-}
 
-.banner .title{
-  font-size: 28px;
-  color: black;
-  font-weight: 700;
-}
 
 .article .discription {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  margin-top: 8px;
+  
   height: 48px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -357,6 +370,318 @@ time {
     max-width: 100%;
   }
 }
+/*----首頁------*/
+.index h3 {
+  font-size: 64px;
+  font-weight: 700;
+  padding-bottom: 32px;
+}
+
+.indexcontent {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 80px 12px;
+}
+
+/*----intro------*/
+.intro {
+  padding: 80px 40px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 55%;
+  margin-right: 80px;
+  margin-left: auto;
+  position: relative;
+  margin-bottom: -160px;
+  right: 0;
+  bottom: 160px;
+}
+
+.intro p {
+  font-size: 28px;
+}
+
+.intro span{
+  padding: 0px 8px ;
+}
+
+@media (max-width: 992px) {
+  .intro {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 40px 24px;
+  }
+  .intro p {
+    font-size: 24px;
+  }
+  .index .headercontent2 {
+    padding-bottom: 200px;
+  }
+}
+
+/*----Solutions------*/
+
+
+.solutions {
+  padding: 0px 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.service,
+.service-right {
+  display: flex;
+}
+
+.service-right {
+  flex-direction: row-reverse;
+}
+
+.service-right .servicedetail {
+  position: relative;
+  margin-right: -40px;
+}
+.service img{
+  margin-right: -40px;
+}
+
+.solutions img{
+  max-width: 55%;
+}
+
+.servicedetail span{
+  display: block;
+  background-color: #0027d5;
+  border-radius: 40px;
+  margin: 18.75px 5px;
+  width: 30px;
+  height: 2.5px;
+}
+
+
+.servicedetail{
+  background-color: #fff;
+  padding: 24px;
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+
+.solutions .cta a{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cta i{
+  display: inline-block;
+  line-height: 1;
+  font-size: 24px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  padding: 8px; 
+}
+
+.cta i:hover{
+  border: none;
+  color: white;
+  background-color: #0027d5;
+}
+
+@media (max-width: 992px) {
+.indexcontent {
+  padding: 64px 12px;
+}
+
+.service,
+.service-right {
+  flex-wrap: wrap;
+}
+
+.service-right {
+  flex-direction: row;
+}
+
+.service-right .servicedetail {
+  margin-right: 0px;
+}
+.service img{
+  margin-right: 0px;
+}
+
+.solutions {
+  padding: 0px;
+}
+
+.index h3 {
+    font-size: 48px;
+  }
+
+.solutions img{
+  max-width: 100%;
+}
+
+.servicedetail {
+  margin: 0px;
+  width: 100%;
+}
+
+.solutions a{
+  flex-wrap: wrap;
+}
+
+}
+/*----Blogcontent------*/
+.blogcontent{
+  margin: 0 auto;
+  max-width: 1320px;
+}
+/*----case study------*/
+.casestudy{
+  margin: 0 auto;
+  max-width: 1320px;
+}
+/*----Email------*/
+.email{
+  display: flex;
+  justify-content: center;
+}
+.emailimg{
+  width: 50%;
+}
+
+.emailimg img{
+    height: 100%;
+
+}
+
+.subcribtion{
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-top: 172px;
+  padding-bottom: 172px;
+}
+
+.subdetail{
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  background-color: #fff;
+  width: 80%;
+}
+
+.subdetail h3{
+  padding-bottom: 16px;
+}
+.subdetail p{
+  padding-bottom: 16px;
+}
+
+.subdetail input{
+  background-color: #F1F1F1;
+  border: none;
+  color: #4B4B4B;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+
+.btn-sub a{
+  margin-top: 24px;
+  display: inline-block;
+  color: #0027d5;
+  border-radius: 40px;
+  border: 1px solid #0027d5;
+  padding: 8px 16px;
+}
+
+.btn-sub a:hover{
+  color: white;
+  background-color: #0027d5;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .email{
+    flex-wrap: wrap;
+  }
+  .emailimg{
+    width: 100%;
+  }
+
+.subcribtion{
+  width: 100%;
+  padding: 12px;
+}
+.subdetail{
+  width: 100%;
+  padding: 40px 24px;
+}
+}
+/*----Contact------*/
+
+.contactme {
+  margin: 0 auto;
+  max-width: 1320px;
+}
+.contactme ul{
+  display: flex;
+  flex-direction: column;
+}
+.contactme li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4B4B4B;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  font-size: 28px;
+}
+
+.contactme img{
+  display: inline-block;
+  width: 44px;
+  padding-right: 8px;
+}
+
+.contactme i{
+  font-size: 24px;
+}
+
+.contactme a{
+  overflow: hidden;
+}
+
+.contactme span{
+  padding-right: 8px;
+
+}
+
+.contactme a{
+  overflow-wrap: break-word;
+  font-size: 24px;
+}
+
+@media (max-width: 992px) {
+  .contactme li{
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+/*----部落格頁面------*/
 
 /*----Content------*/
 
@@ -382,7 +707,7 @@ time {
   margin-right: 10px;
 }
 
-input {
+.search input {
   border: none;
   font-weight: 500;
   width: 80%;
@@ -418,7 +743,7 @@ input {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  margin-top: 8px;
+
   height: 48px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -476,6 +801,9 @@ input {
   font-size: 24px;
   font-weight: 900;
 }
+
+
+
 a {
   font-weight: 500;
   color: #4b4b4b;
@@ -484,7 +812,7 @@ a {
 
 /*----內文頁面-----*/
 .contentoutline{
-  border: 1px solid #6c757d;
+  border: 1px solid #6C757D;
   padding: 80px 12px;
 }
 
@@ -531,7 +859,7 @@ a {
   padding-left: 36px;
 } 
 
-.articlecontent .textcolor-blue{
+.textcolor-blue{
   font-weight: 500;
   color: #0027d5;
   padding-left: 4px;
@@ -578,7 +906,7 @@ a {
   border: 1px solid #000;
   padding: 8px 16px;
   font-size: 16px;
-  height: 24px; /*不知道為什麼要加高度才能符合設計稿*/
+  line-height: 1;
 }
 .articlepage i{
   font-size: 24px;
