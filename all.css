@@ -453,7 +453,7 @@ time {
   max-width: 55%;
 }
 
-.servicedetail span{
+.line{
   display: block;
   background-color: #0027d5;
   border-radius: 40px;
@@ -542,8 +542,167 @@ time {
 /*----case study------*/
 .casestudy{
   margin: 0 auto;
-  max-width: 1320px;
+  max-width: 1296px;
 }
+
+.case {
+  display: flex;
+  max-width: 1480px;
+  gap: 24px;
+}
+.caseimg {
+  background-color: #EDEDED;
+  padding: 24px;
+  width: 110%
+}
+
+.study {
+  display: flex;
+  flex-direction: column;
+}
+
+.study1 {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 40px;
+  margin-top: 29px;
+  margin-left: -195px;
+  max-width: 100%;
+}
+
+.study .textcolor-blue{
+  padding: 0;
+  font-weight: 700;
+}
+
+.study p {
+  padding-top: 24px;
+  font-weight: 700;
+}
+
+.study2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5F5;
+  padding: 80px 40px;
+  margin-top: -40px;
+}
+
+.btn-blue {
+  display: inline-block;
+  align-self: flex-start; /*為了讓按鈕不要佔一整行*/
+  color: #0027d5;
+  border: 1px solid #0027d5;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+  padding: 8px 16px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+
+.btn-blue:hover{
+  background-color: #0027d5;
+  color: #FFFFFF;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .case {
+    flex-wrap: wrap;
+  }
+
+  .case img{
+    width: 100%;
+    height: 80vh;
+  }
+
+  .study1 {
+  padding: 40px 24px;
+  margin-left: 0px;
+  margin-top: -160px;
+  margin-bottom: 12px;
+}
+
+.study2 {
+  margin-top: 0px;
+  padding: 40px 24px;
+}
+}
+
+.podcast {
+  margin-top: 40px;
+  padding: 24px;
+  background-color: #F5F5F5;
+}
+
+.podcasts {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.podcasts li {
+  width: 25%;
+}
+
+.podcasts .txt24px{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.podcasts ul {
+  border-bottom: 1px solid #4B4B4B;
+  padding-bottom: 16px;
+  color: #4B4B4B;
+}
+
+.checklist p {
+  margin-top: 8px;
+}
+
+.podcasts i{
+  color: #0027d5;
+  padding-right: 8px;
+}
+
+.podcasts img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.btn-gray {
+  display: inline-block;
+  color: #4B4B4B;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  border-radius: 40px;
+  margin-top: 16px;
+}
+
+.btn-gray:hover {
+  color: white;
+  background-color: #000;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .podcasts {
+  flex-wrap: wrap;
+}
+.podcasts li {
+  width: 45%;
+}
+}
+
+@media (max-width: 768px) {
+
+.podcasts li {
+  width: 100%;
+}
+}
+
 /*----Email------*/
 .email{
   display: flex;
@@ -555,7 +714,6 @@ time {
 
 .emailimg img{
     height: 100%;
-
 }
 
 .subcribtion{
@@ -579,10 +737,9 @@ time {
   width: 80%;
 }
 
-.subdetail h3{
-  padding-bottom: 16px;
-}
+
 .subdetail p{
+  font-size: 20px;
   padding-bottom: 16px;
 }
 
@@ -598,7 +755,11 @@ time {
   padding-left: 16px;
 }
 
-.btn-sub a{
+.subdetail input:focus-within {
+  box-shadow: 0 0 7px #0027d5;
+}
+
+/*.btn-sub a{
   margin-top: 24px;
   display: inline-block;
   color: #0027d5;
@@ -611,7 +772,7 @@ time {
   color: white;
   background-color: #0027d5;
   border: none;
-}
+}*/
 
 @media (max-width: 992px) {
   .email{
