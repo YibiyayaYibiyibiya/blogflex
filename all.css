@@ -316,20 +316,6 @@ time {
 
 
 
-.article .discription {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  
-  height: 48px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #000;
-  font-weight: 500;
-  margin-bottom: 24px;
-  font-size: 16px;
-}
-
 .read {
   display: inline-block;
   padding: 8px 16px;
@@ -491,6 +477,11 @@ time {
   background-color: #0027d5;
 }
 
+.cta:hover{
+  transform: translateX(6px);
+}
+
+
 @media (max-width: 992px) {
 .indexcontent {
   padding: 64px 12px;
@@ -536,13 +527,102 @@ time {
 }
 /*----Blogcontent------*/
 .blogcontent{
-  margin: 0 auto;
+  margin: auto;
   max-width: 1320px;
 }
+
+.main-wrapper-area {
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  overflow: visible;
+}
+
+.swiper-button-prev {
+  left: -64px;
+}
+
+.swiper-button-next {
+  right: -64px;
+}
+
+.blogcontent img {
+  margin-bottom: 16px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  height: 44px;
+  width: 44px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  background-color: #0027d59f;
+  border-radius: 50px;
+  padding: 8px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  background-color: #0027d5;
+  border-radius: 50px;
+  padding: 8px;
+}
+
+.swiper-button-prev i,
+.swiper-button-next i{
+  font-size: 24px;
+  color: white;
+}
+
+@media (max-width: 1500px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static;
+    transform: none;
+    margin-top: 32px;
+  }
+  .swiper-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    
+  }
+  .swiper {
+    
+  }
+}
+
+
+
+
 /*----case study------*/
 .casestudy{
   margin: 0 auto;
-  max-width: 1296px;
+  max-width: 1320px;
 }
 
 .case {
@@ -835,6 +915,11 @@ time {
   font-size: 24px;
 }
 
+.contactme li:hover{
+  transform: translateX(6px);
+  color: #0027d5;
+}
+
 @media (max-width: 992px) {
   .contactme li{
     flex-wrap: wrap;
@@ -900,17 +985,16 @@ time {
   margin: 40px 12px;
 }
 
-.blogarticle .discription {
+.discription {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-
   height: 48px;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #000;
   font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 992px) {
@@ -975,6 +1059,7 @@ a {
 .contentoutline{
   border: 1px solid #6C757D;
   padding: 80px 12px;
+  margin: 0 auto;
 }
 
 
