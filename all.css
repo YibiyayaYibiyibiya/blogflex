@@ -314,8 +314,6 @@ time {
   color: #4B4B4B;
 }
 
-
-
 .read {
   display: inline-block;
   padding: 8px 16px;
@@ -415,6 +413,7 @@ time {
   padding: 0px 110px;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   gap: 32px;
 }
 
